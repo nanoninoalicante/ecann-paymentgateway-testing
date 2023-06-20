@@ -38,9 +38,9 @@ export class TruevoService {
         // 0. Initialize the payment wrapper (same procedure)
 
         // 1. Create a HPP transaction
-        const amount = 1.5;
+        const amount = 10.5;
 
-        const customerId = "101";
+        const customerId = "102";
 
         // Order ID or any randomly generated unique sequence of characters can be
         // used as a Transaction ID
@@ -48,20 +48,25 @@ export class TruevoService {
         // or generate a random
         const txnId = GUID();
 
-        const billing = new Address("John", "Doe", "john@doe.com", "123123123");
+        const billing = new Address(
+            "Elon",
+            "Musk",
+            "elon@musk.com",
+            "123123123",
+        );
         const shipping = new Address(
-            "Alice",
-            "Targ",
-            "alice@targ.com",
+            "Elon",
+            "Musk",
+            "elon@musk.com",
             "321321321",
         );
 
         const customer = new Customer(customerId, billing, shipping);
 
         const urlObj = new Url(
-            "http://127.0.0.1/success",
-            "http://127.0.0.1/fail",
-            "http://127.0.0.1/cancel",
+            "http://127.0.0.1:8080/truevo/success",
+            "http://127.0.0.1:8080/truevo/fail",
+            "http://127.0.0.1:8080/truevo/cancel",
         );
 
         try {
@@ -96,11 +101,7 @@ export class TruevoService {
 
             // With Dynamic Descriptor
             payment.setDynamicDescriptor(
-                new DynamicDescriptor(
-                    "1234567890",
-                    "test@example.com",
-                    "example org",
-                ),
+                new DynamicDescriptor("1234567890", "hello@ecann.fr", "Ecann"),
             );
 
             // Set Payment Execution Date

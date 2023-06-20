@@ -25,7 +25,8 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
-    "nodejs-wrapper": "file:nodejs-wrapper-0.1.23-truevo-4540153703.tgz",
+    "@nestjs/serve-static": "^3.0.1",
+    "nodejs-wrapper": "https://downloads.celerispay.com/nodejs/nodejs-wrapper-0.1.23-truevo-4540153703.tgz",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "uuid": "^9.0.0"

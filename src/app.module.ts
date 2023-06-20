@@ -3,7 +3,7 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { HelloModule } from "./hello/hello.module";
 import { ConfigModule } from "@nestjs/config";
-import { TruevoModule } from './truevo/truevo.module';
+import { TruevoModule } from "./truevo/truevo.module";
 @Module({
     imports: [
         HelloModule,
